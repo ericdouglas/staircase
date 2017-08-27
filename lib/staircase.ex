@@ -1,18 +1,16 @@
 defmodule Staircase do
-  @moduledoc """
-  Documentation for Staircase.
-  """
+  def main(size) do
+    Enum.each(1..size, fn i ->
+      IO.puts(space_gen(size - i) <> symbol_gen(i))
+    end)
+  end
 
-  @doc """
-  Hello world.
+  def space_gen(0), do: ""
+  def space_gen(num) when num > 0 do
+    Enum.reduce(1..num, "", fn(_i, acc) -> acc <> " " end)
+  end
 
-  ## Examples
-
-      iex> Staircase.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def symbol_gen(num) do
+    Enum.reduce(1..num, "", fn(_i, acc) -> acc <> "#" end)
   end
 end
