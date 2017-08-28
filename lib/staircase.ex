@@ -13,7 +13,7 @@ defmodule Staircase do
   end
 
   @doc """
-  Generate a string with `size` characters `char`
+  Generate a string of size `size` made with characters `char`
 
   ## Example
 
