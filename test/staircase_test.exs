@@ -15,7 +15,7 @@ defmodule StaircaseTest do
  ##
 ###\n"
 
-    assert capture_io( fn -> Staircase.main(7) end) ==
+    assert capture_io(fn -> Staircase.main(7) end) ==
 "      #
      ##
     ###
